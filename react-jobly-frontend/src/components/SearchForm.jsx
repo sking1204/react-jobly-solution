@@ -13,8 +13,10 @@ function SearchForm ({searchFor}){
 
    async function handleSubmit(evt){
     evt.preventDefault();
-    const resp = await JoblyApi.getCompanies(searchFor);
-    setCompanies(resp);
+    // const resp = await JoblyApi.getAllCompanies(fetchCompanies);
+    // setCompanies(resp);
+    searchFor(searchTerm.trim() || undefined);
+    setSearchTerm(searchTerm.trim());
 
    }
 

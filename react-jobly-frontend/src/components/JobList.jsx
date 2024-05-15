@@ -4,8 +4,7 @@ import JobCardList from './JobCardList';
 import SearchForm from './SearchForm';
 
 
-function JobList() {
-    console.debug("JobList");
+function JobList() {   
   
     const [jobs, setJobs] = useState(null);
   
@@ -21,7 +20,7 @@ function JobList() {
   
     /** Triggered by search form submit; reloads jobs. */
     async function search(title) {
-      let jobs = await JoblyApi.getJob(title);
+      let jobs = await JoblyApi.getJobs(title);
       setJobs(jobs);
     }
   

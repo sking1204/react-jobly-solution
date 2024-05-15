@@ -39,6 +39,13 @@ class JoblyApi {
       let res = await this.request(`companies/`);
       return res.companies;
     }
+
+     /** Get companies (filtered by name if not undefined) */
+
+  static async getCompanies(name) {
+    let res = await this.request("companies", { name });
+    return res.companies;
+  }
   
     /**Search for a company by specific parameters */
     static async searchCompanies(formData) {
@@ -74,6 +81,13 @@ class JoblyApi {
       let res = await this.request(`jobs/`);
       return res.jobs;
     }
+
+     /** Get list of jobs (filtered by title if not undefined) */
+
+  static async getJobs(title) {
+    let res = await this.request("jobs", { title });
+    return res.jobs;
+  }
   
     /**Search for a job by specific parameters */
     static async searchJobs(formData) {
