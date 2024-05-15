@@ -12,7 +12,7 @@ const PORT = +process.env.PORT || 3001;
 // Use dev database, testing database, or via env var, production database
 function getDatabaseUri() {
   return (process.env.NODE_ENV === "test")
-      ? "react_jobly_solution"
+      ? "react_jobly_solution_test"
       : process.env.DATABASE_URL || "react_jobly_solution";
 }
 
